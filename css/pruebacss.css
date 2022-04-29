@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/*VARIABLE*/
+h1 {
+  color: #b96060;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Lobster",  cursive; }
+
+/*EXTEND*/
+h2, .grupoh2contacto {
+  color: #b8848f;
+  font-size: 25px;
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif; }
+
+.grupoh2contacto {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 10px; }
+
+/*MIXIN*/
+p {
+  text-align: center;
+  line-height: 20px;
+  padding-left: 30px;
+  margin-left: 20px;
+  font-size: 18px; }
+
+/* INICIO PREGUNTAS FRECUENTES*/
+
+
+.mainpf {
+  height: 600px;
+}
+
+button, input, optgroup, select, textarea {
+  font-family:  'Merriweather Sans', sans-serif;
+}
+
+/*FIN PREGUNTAS FRECUENTES*/
+
+/*INICIO CONTACTO*/
+
+.contenedor2 {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+/*FIN CONTACTO*/
+
+/*FOCUS */
+input:focus {
+  background-image: linear-gradient(to right, rgb(218, 112, 112), rgba(231, 73, 73, 0.5));
+  width: 300px;
+  height: 30px;
+  }
+  .text-center  {
+    background-image: linear-gradient(to right, rgb(218, 112, 112), rgba(231, 73, 73, 0.5));
+  }
+  .d-block {
+      height: 500px;
+  }
+/*FOCUS*/
+ 
+/*ESTILO CSS*/
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: rgb(243, 242, 242);
+  font-family:'Noto Sans KR', sans-serif;
+  
+}
+
+/*Aplicado a index, decoracion,productos, preg frecuentes*/
+
+h3{
+  color:rgb(206, 127, 127);
+  font-size: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+h4{
+  color: black;
+  font-size: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: rgb(23, 26, 27);
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+li {
+    list-style-type:none;
+    display: inline-block; 
+    
+}
+/*Aplicado a index, decoracion,productos, preg frecuentes*/
+
+/*APLICADO A INDEX*/
+
+#decoracion {
+  padding-top: 90px;
+  min-height: 800px;
+  
+}
+#decoracion p {
+  color:rgb(31, 28, 28);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+.content-center {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+
+.h2index {
+  font-size: 35px;
+  font-weight: 500px;
+  line-height: 70px;
+  color:rgb(206, 127, 127);
+  
+  
+}
+.pindex {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/*BOTON DEL INDEX DECORACION*/
+.btn {
+  font-size: 14px;
+  padding: 15px 26px;
+  
+  border-radius: 2px;
+  display: inline-block;
+}
+.btn-light {
+background-color: white;
+color: black;
+border: 2px solid white;
+}
+.topmargin-sm {
+  margin-top: 30px;
+  
+}
+/*LINKS FOOTER */
+.btn:hover {
+    transform: scale(2,2);
+}
+
+/*INICIO NAV*/
+header nav {
+  background-image: linear-gradient(to right, rgb(218, 112, 112), rgba(231, 73, 73, 0.5));
+}
+header nav div {
+  justify-content: center;
+}
+header nav div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header nav div div a {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2.5rem;
+}
+header nav div div a:hover {
+  color: white;
+}
+header nav div div h3 {
+  color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 2.5rem;
+}
+header nav div div {
+  align-items: center;
+}
+header nav div div ul {
+  display: flex;
+  list-style: none;
+}
+header nav div div ul li {
+  padding: 10px;
+}
+header nav div div ul li a {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style:initial;
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+  transition: 0.5s;
+}
+header nav div div ul li a:hover {
+  color: rgb(240, 182, 182);
+}
+@media only screen and (max-width: 768px) {
+  header nav div ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.imagenLogo {
+  width: 200px;
+  height:200px;
+}
+.imagenLogo img {
+  width: 100%;
+  height: 100%;
+}
+
+/*FIN NAV*/
+@media only screen and (max-width: 768px) {
+.img-fluid {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,40 @@
+/*Variable*/
+$colorH1: rgb(121, 44, 44);  
+$tamanioH1: 40px;
+$direccionH1: center;
+$letraH1: 'Lobster', cursive;
+
+ h1 {
+    color:$colorH1;
+    font-size: $tamanioH1;
+    text-align: $direccionH1;
+    font-family: $letraH1;   
+    
+}
+/*Extend*/
+h2 {
+    color: rgb(226, 45, 84);
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+    font-family:'Noto Sans KR', sans-serif;
+}
+.grupoh2contacto {
+    @extend  h2;
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 10px;
+
+}
+/*Mixin*/
+@mixin parrafo ($direccionTexto, $alturaLinea, $direccionPadding, $direccionMargin ) {
+   
+    text-align: $direccionTexto;
+    line-height: $alturaLinea;
+    padding-left: $direccionPadding;
+    margin-left: $direccionMargin;
+}
+p {
+    @include parrafo (center,20px, 30px, 20px);
+    font-size: 18px;
+}
