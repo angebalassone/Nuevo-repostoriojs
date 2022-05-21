@@ -1,7 +1,4 @@
-
-
-
-    /*PARTE 3 Ejercicio 3 
+/*PARTE 3 Ejercicio 3 
     let productos = '';
     for (let index = 0; index < 5; index++) {
         productos += prompt("INGRESAR PRODUCTOS")+"\n";
@@ -45,7 +42,7 @@
     //return nombre;
   };
   
-  class Productos {
+  /*class Productos {
   constructor (nombre, precio, articulo) {
    this.nombre = nombre;
    this.precio = precio;
@@ -77,21 +74,38 @@ const productoSeleccionado = (articulo) => {
   console.log(articulo);
   let productosFind = productos.find((element) => element.articulo === articulo);
   carrito.push(productosFind);
-  let seguir = confirm("Desea llevar otro almohadon ?: ");
+  let seguir = confirm("Desea llevar otro almohadon ?");
 
   if (seguir === true) {
     init();
   }
 };
 
-
 const init = () => {
 productoArticulo = mostrarProductos ();
 productoSeleccionado (productoArticulo);
 };
+*/
 saludar ();
-init ();
+//init (); //
 
+document.querySelector('h1').textContent ="Bienvenidos"
+
+/*const color= document.getElementsByClassName ("colores")
+color.innerHTML = "<h2>Color: Blanco,Celeste, Rosa</h2>"
+color.className = 
+ducument.getElementById("colores").textContent ="Blanco,Celeste y Rosa"
+console.log(color);
+*/
+
+
+
+ // EVENTO //
+const buttonEnviar = document.querySelector ("#enviar")
+
+buttonEnviar.addEventListener("click", ()=> {
+    console.log("Formulario Enviado");
+  })
 
 
 
