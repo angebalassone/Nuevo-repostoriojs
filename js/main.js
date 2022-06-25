@@ -1,39 +1,144 @@
+const Clickbutton = document.querySelectorAll('.button')
+const tbody = document.querySelector('.tbody')
+let carrito = []
 
- /*document.querySelector('h1').textContent ="Bienvenidos" 
+Clickbutton.forEach(btn => {
+  btn.addEventListener('click', addToCarritoItem)
+})
 
 
-const divContenedor = document.getElementById("newDiv");
-divContenedor.innerHTML = "<p>Encontra la nueva temporada Primavera-Verano </p>" 
-*/
+function addToCarritoItem(e){
+  const button = e.target
+  const item = button.closest('.card')
+  const itemTitle = item.querySelector('.card-title').textContent;
+  const itemPrice = item.querySelector('.precio').textContent;
+  const itemImg = item.querySelector('.card-img-top').src;
 
-/* Local Storage
-let usuario = localStorage.getItem('nombre');
-if (usuario == null) {
- localStorage.setItem('nombre', prompt('INGRESAR NOMBRE '));
-} else {
- alert('Bienvenido/a ' + usuario);
+  const newItem = {
+    title: itemTitle,
+    precio: itemPrice,
+    img: itemImg,
+    cantidad: 1
+  }
+
+  addItemCarrito(newItem)
 }
-*/
- const saludar = () => {
-    let nombre = prompt("Bienvenido a Emil-Ang , ingrese su nombre :");
-        while (nombre === "") {
-          nombre = prompt("Bienvenido a Emil-Ang , ingrese su nombre :");
-        }
-        //return nombre;
-      };
-   
-    saludar (); 
-    
-   
-    // Operadon o //
-    let entrada2 = prompt("INGRESAR SI TENES UN CODIGO DE DESCUENTO");
-    if ((entrada2 == "EMIL-ANG") || (entrada2 == "emil-ang")) {
-    console.log("CORRECTO");
-    } else {
-    console.log("ERROR");
-    }
 
-    //Promesa de clase//
+
+function addItemCarrito(newItem){
+
+  const alert = document.querySelector('.alert')
+
+  setTimeout( function(){
+    alert.classList.add('hide')
+  }, 2000)
+    alert.classList.remove('hide')
+
+  const InputElemnto = tbody.getElementsByClassName('input__elemento')
+  for(let i =0; i < carrito.length ; i++){
+    if(carrito[i].title.trim() === newItem.title.trim()){
+      carrito[i].cantidad ++;
+      const inputValue = InputElemnto[i]
+      inputValue.value++;
+      CarritoTotal()
+      return null;
+    }
+  }
+
+  carrito.push(newItem)
+
+  renderCarrito()
+} 
+
+
+function renderCarrito(){
+  tbody.innerHTML = ''
+  carrito.map(item => {
+    const tr = document.createElement('tr')
+    tr.classList.add('ItemCarrito')
+    const Content = `
+    
+    <th scope="row">1</th>
+            <td class="table__productos">
+              <img src=${item.img} alt="BlusaBordada" width="20%">
+              <h6 class="title">${item.title}</h6>
+            </td>
+            <td class="table__price"><p>${item.precio}</p></td>
+            <td class="table__cantidad">
+              <input type="number" min="1" value=${item.cantidad} class="input__elemento">
+              <button class="delete btn btn-danger">x</button>
+            </td>
+    
+    `
+    tr.innerHTML = Content;
+    tbody.append(tr)
+
+    tr.querySelector(".delete").addEventListener('click', removeItemCarrito)
+    tr.querySelector(".input__elemento").addEventListener('change', sumaCantidad)
+  })
+  CarritoTotal()
+}
+
+function CarritoTotal(){
+  let Total = 0;
+  const itemCartTotal = document.querySelector('.itemCartTotal')
+  carrito.forEach((item) => {
+    const precio = Number(item.precio.replace("$", ''))
+    Total = Total + precio*item.cantidad
+  })
+
+  itemCartTotal.innerHTML = `Total $${Total}`
+  addLocalStorage()
+}
+
+function removeItemCarrito(e){
+  const buttonDelete = e.target
+  const tr = buttonDelete.closest(".ItemCarrito")
+  const title = tr.querySelector('.title').textContent;
+  for(let i=0; i<carrito.length ; i++){
+
+    if(carrito[i].title.trim() === title.trim()){
+      carrito.splice(i, 1)
+    }
+  }
+
+  const alert = document.querySelector('.remove')
+
+  setTimeout( function(){
+    alert.classList.add('remove')
+  }, 2000)
+    alert.classList.remove('remove')
+
+  tr.remove()
+  CarritoTotal()
+}
+
+function sumaCantidad(e){
+  const sumaInput  = e.target
+  const tr = sumaInput.closest(".ItemCarrito")
+  const title = tr.querySelector('.title').textContent;
+  carrito.forEach(item => {
+    if(item.title.trim() === title){
+      sumaInput.value < 1 ?  (sumaInput.value = 1) : sumaInput.value;
+      item.cantidad = sumaInput.value;
+      CarritoTotal()
+    }
+  })
+}
+
+function addLocalStorage(){
+  localStorage.setItem('carrito', JSON.stringify(carrito))
+}
+
+window.onload = function(){
+  const storage = JSON.parse(localStorage.getItem('carrito'));
+  if(storage){
+    carrito = storage;
+    renderCarrito()
+  }
+}
+
+    // Promesa de clase//
     const BD = [
       {id: 1, nombre: 'Almohadon Enjoy Life', precio: 700},
       {id: 2, nombre: 'Almohadon Dreams White', precio: 800},
@@ -64,14 +169,29 @@ pedirProductos()
  })
  
     
-// Ajax//
-$.ajax({
-  method: "GET",
-  url: "http://file:///C:/Users/angelina.balassone/Desktop/backup%20Angi/ANGE%20NUEVA%20COMPU/ange/angelina/curso%20de%20desarrolador%20web/Javascript/TRABAJO/nuevo_repo/index.html/"
-}).done(function(data) {
-  alert(data); // imprimimos la respuesta
-}).fail(function() {
-  alert("Algo salió mal");
-}).always(function() {
-  alert("Siempre se ejecuta")
-});
+
+
+//Carrito de compras//
+
+
+// Botton Comprar 
+// EVENTO //
+const buttonComprar = document.querySelector ("#comprar")
+
+buttonComprar.addEventListener("click", 
+   function () {
+        Swal.fire({
+            title: "Su compra a sido exitosa",
+            icon: "success",
+        });
+    });
+
+
+
+
+
+ 
+
+  
+
+

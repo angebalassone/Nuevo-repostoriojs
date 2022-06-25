@@ -56,142 +56,207 @@
       </div>
     </div>
   </nav>
+<!-- Navbar content del carrito de compras-->
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Productos</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Carrito</a>
+    <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+      
+      </div>
+      <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+        
+      </div>
+  
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+     <!--Inicio tarjetas Remeras-->
+     <h2 class="display-6">Remeras</h2>
+     <div class="container-fluid">
+       
+     <div class="row row-cols-1 row-cols-md-4 g-4">
+       <div class="col">
+         <div class="card ">
+           <img src="../img/blusabordada1.png" class="card-img-top" alt="remera bordada blanca">
+           <div class="card-body">
+             <h5 class="card-title">Remera Bordada Blanca  </h5>
+             <h5>Precio: <span class="precio">$2200</span></h5>
+             <button class="btn btn-primary button">Agregar al carrito</button>
+           </div>
+         </div>
+       </div>
+       <div class="col">
+         <div class="card">
+           <img src="../img/blusabordada2.png" class="card-img-top" alt="remera bordada natural">
+           <div class="card-body">
+             <h5 class="card-title">Remera Bordada Natural</h5>
+             <h5>Precio: <span class="precio">$2000</span></h5>
+             <button class="btn btn-primary button">Agregar al carrito</button>
+           </div>
+         </div>
+       </div>
+       <div class="col">
+         <div class="card">
+           <img src="../img/blusabordada4.png" class="card-img-top" alt="remera bordada dorada">
+           <div class="card-body">
+             <h5 class="card-title">Remera Bordada Dorada</h5> 
+             <h5>Precio: <span class="precio">$2000</span></h5>
+             <button class="btn btn-primary button">Agregar al carrito</button>
+           </div>
+         </div>
+       </div>
+       <div class="col">
+         <div class="card">
+           <img src="../img/blusabordada5.png" class="card-img-top" alt="remera bordada blanca lisa">
+           <div class="card-body">
+             <h5 class="card-title">Remera Bordada Blanca Lisa </h5>
+             <h5>Precio: <span class="precio">$2200</span></h5>
+             <button class="btn btn-primary button">Agregar al carrito</button>
+           </div>
+         </div>
+       </div>
+     </div>
+     </div>
+     <!--Fin Tarjetas Remeras-->
+     <h2 class="display-6">Sweaters</h2>
+     <!--Inicio Tarjetas Sweaters-->
+     <div class="container-fluid">
+       
+       <div class="row row-cols-1 row-cols-md-4 g-4">
+         <div class="col">
+           <div class="card ">
+             <img src="../img/sweaterazul.png" class="card-img-top" alt="remerabordada3" id="sweater azul">
+             <div class="card-body">
+               <h5 class="card-title">Sweater Azul </h5>
+               <h5>Precio: <span class="precio">$3000</span></h5>
+               <button class="btn btn-primary button">Agregar al carrito</button>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="../img/sacolanillarojo.png" class="card-img-top" alt="saco lanilla rojo">
+             <div class="card-body">
+               <h5 class="card-title">Saco Lanilla Rojo</h5>
+               <h5>Precio: <span class="precio">$2500</span></h5>
+               <button class="btn btn-primary button">Agregar al carrito</button>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="../img/sacolanilla.png" class="card-img-top" alt="saco lanilla verde ">
+             <div class="card-body">
+               <h5 class="card-title">Saco Lanilla Verde</h5>
+               <h5>Precio: <span class="precio">$2500</span></h5>
+               <button class="btn btn-primary button">Agregar al carrito</button>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="../img/poleramarron.png" class="card-img-top" alt="polera lisa marron">
+             <div class="card-body">
+               <h5 class="card-title">Polera Lisa Marron</h5>
+               <h5>Precio: <span class="precio">$2000</span></h5>
+               <button class="btn btn-primary button">Agregar al carrito</button>
+             </div>
+           </div>
+         </div>
+       </div>
+       </div>
+       <!--Fin tarjetas sweaters-->
+       <!--Inicio Tarjetas Camisas-->
+       <h2 class="display-6">Camisas</h2>
+       <div class="container-fluid">
+       
+           <div class="row row-cols-1 row-cols-md-4 g-4">
+             <div class="col">
+               <div class="card ">
+                 <img src="../img/Camisa1.png" class="card-img-top" alt="remerabordada3" id="camisa bordada blanca">
+                 <div class="card-body">
+                   <h5 class="card-title">Camisa Bordada Blanca</h5>
+                   <h5>Precio: <span class="precio">$2700</span></h5>
+                   <button class="btn btn-primary button">Agregar al carrito</button>
+                 </div>
+               </div>
+             </div>
+             <div class="col">
+               <div class="card">
+                 <img src="../img/camisaamarilla.png" class="card-img-top" alt="camisa amarilla">
+                 <div class="card-body">
+                   <h5 class="card-title">Camisa Amarilla</h5>
+                   <h5>Precio: <span class="precio">$1700</span></h5>
+                   <button class="btn btn-primary button">Agregar al carrito</button>
+                 </div>
+               </div>
+             </div>
+             <div class="col">
+               <div class="card">
+                 <img src="../img/camisablanca.png" class="card-img-top" alt="camisa blanca lisa">
+                 <div class="card-body">
+                   <h5 class="card-title">Camisa Blanca Lisa</h5>
+                   <h5>Precio: <span class="precio">$2000</span></h5>
+                   <button class="btn btn-primary button">Agregar al carrito</button>
+                 </div>
+               </div>
+             </div>
+             <div class="col">
+               <div class="card">
+                 <img src="../img/camisabolados.png" class="card-img-top" alt="camisa con bolados">
+                 <div class="card-body">
+                   <h5 class="card-title">Camisa con bolados</h5>
+                   <h5>Precio: <span class="precio">$2700</span></h5>
+                   
+                   <button class="btn btn-primary button">Agregar al carrito</button>
+                 </div>
+               </div>
+             </div>
+           </div>
+           </div>
+       <!--Fin tarjetas Camisas--></div>
+       <!--Carrito de compras-->
+  <div class="tab-pane fade carrito" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+    <div class="alert container  top-0 alert-primary hide" role="alert">
+     Productos seleccionados para el carrito de compras
+    </div>
+    <br>
+      <table class="table">
+        <thead>
+          <tr class="text-primary">
+            <th scope="col">#</th>
+            <th scope="col">Productos</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">   
+        </tbody>
+      </table>
+      <br><br>
+      <div class="row mx-4">
+        <div class="col">
+          <h3 class="itemCartTotal">Total: 0</h3>
+        </div>
+        <div class="col d-flex justify-end">
+          <button class="btn btn-success" id="comprar">Comprar</button>
+        </div>
+
+      </div>
+
+   <!-- Carrito de compras-->
+  
+    </div>
+  
+</div>
   </header>
-    <main>
-          <!--Inicio tarjetas Remeras-->
-          <h2 class="display-6">Remeras</h2>
-          <div class="container-fluid">
-            
-          <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-              <div class="card ">
-                <img src="../img/blusabordada1.png" class="card-img-top" alt="remera bordada blanca">
-                <div class="card-body">
-                  <h5 class="card-title">Remera Bordada Blanca  </h5>
-                  <p class="card-text">$2200</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="../img/blusabordada2.png" class="card-img-top" alt="remera bordada natural">
-                <div class="card-body">
-                  <h5 class="card-title">Remera Bordada Natural</h5>
-                  <p class="card-text">$2000</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="../img/blusabordada4.png" class="card-img-top" alt="remera bordada dorada">
-                <div class="card-body">
-                  <h5 class="card-title">Remera Bordada Dorada</h5> 
-                  <p class="card-text">$2000</p>
-                
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="../img/blusabordada5.png" class="card-img-top" alt="remera bordada blanca lisa">
-                <div class="card-body">
-                  <h5 class="card-title">Remera Bordada Blanca Lisa </h5>
-                  <p class="card-text">$2200</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-          <!--Fin Tarjetas Remeras-->
-          <h2 class="display-6">Sweaters</h2>
-          <!--Inicio Tarjetas Sweaters-->
-          <div class="container-fluid">
-            
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-              <div class="col">
-                <div class="card ">
-                  <img src="../img/sweaterazul.png" class="card-img-top" alt="remerabordada3" id="sweater azul">
-                  <div class="card-body">
-                    <h5 class="card-title">Sweater Azul </h5>
-                    <p class="card-text">$3000</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="../img/sacolanillarojo.png" class="card-img-top" alt="saco lanilla rojo">
-                  <div class="card-body">
-                    <h5 class="card-title">Saco Lanilla Rojo</h5>
-                    <p class="card-text">$2500</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="../img/sacolanilla.png" class="card-img-top" alt="saco lanilla verde ">
-                  <div class="card-body">
-                    <h5 class="card-title">Saco Lanilla Verde</h5>
-                    <p class="card-text">$2500</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="../img/poleramarron.png" class="card-img-top" alt="polera lisa marron">
-                  <div class="card-body">
-                    <h5 class="card-title">Polera Lisa Marron</h5>
-                    <p class="card-text">$2200</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-            <!--Fin tarjetas sweaters-->
-            <!--Inicio Tarjetas Camisas-->
-            <h2 class="display-6">Camisas</h2>
-            <div class="container-fluid">
-            
-                <div class="row row-cols-1 row-cols-md-4 g-4">
-                  <div class="col">
-                    <div class="card ">
-                      <img src="../img/Camisa1.png" class="card-img-top" alt="remerabordada3" id="camisa bordada blanca">
-                      <div class="card-body">
-                        <h5 class="card-title">Camisa Bordada Blanca</h5>
-                        <p class="card-text">$2700</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card">
-                      <img src="../img/camisaamarilla.png" class="card-img-top" alt="camisa amarilla">
-                      <div class="card-body">
-                        <h5 class="card-title">Camisa Amarilla</h5>
-                        <p class="card-text">$2500</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card">
-                      <img src="../img/camisablanca.png" class="card-img-top" alt="camisa blanca lisa">
-                      <div class="card-body">
-                        <h5 class="card-title">Camisa Blanca Lisa</h5>
-                        <p class="card-text">$2000</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card">
-                      <img src="../img/camisabolados.png" class="card-img-top" alt="camisa con bolados">
-                      <div class="card-body">
-                        <h5 class="card-title">Camisa con bolados</h5>
-                        <p class="card-text">$2700</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-            <!--Fin tarjetas Camisas-->
-    </main>
+  
+</main>
     <footer class="text-center text-white">
         <!-- Grid container -->
         <div class="container pt-4 p">
@@ -226,9 +291,17 @@
         </div>
         <!-- Copyright -->
     </footer>
+    <!--Libreria J Query -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+           integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
+           crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
+        <script src="../js/main.js"></script>
+        <!--Link libreria JAVASCRIPT-->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

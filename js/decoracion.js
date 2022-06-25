@@ -1,4 +1,4 @@
-// Ver si existe una clave productos en el local storage //
+/* Ver si existe una clave productos en el local storage //
 let productos = localStorage.getItem('productos');
 if (productos == null) {
  const stock = [];
@@ -55,4 +55,5 @@ let array = JSON.parse(guardadas);
 array. forEach(almohadones => { almohadon.precio += (almohadon.precio * 0.3) });
 localStorage .setItem('almohadon ', JSON.stringify (array));
 }
+*/
 
